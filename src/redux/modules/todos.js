@@ -63,7 +63,15 @@ const todoList = (state = initialState, action) => {
           return todo;
         }),
       };
-
+    case READ_TODO:
+      return {
+        ...state,
+        detail: state.todos.filter((item) => {
+          console.log(action.payload);
+          console.log(item);
+          return item.id === action.payload;
+        }),
+      };
     default:
       return state;
   }

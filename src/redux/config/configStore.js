@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 import todos from "../modules/todos"; 
 //중괄호 안에 모듈(todos) 넣기=>모듈을 한 개씩 추가할때마다 모듈명만 바꿔서 추가로 적어주기
 const rootReducer = combineReducers({
-  todos,
+  todos
 });
 const store = createStore(rootReducer);
 export default store;
